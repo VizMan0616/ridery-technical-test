@@ -1,0 +1,64 @@
+{
+	"name": "Ridery Technical Test",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "odoo",
+	"remoteUser": "root",
+	"workspaceFolder": "/mnt/",
+	"shutdownAction": "none",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/bin/python3",
+				"autoDocstring.docstringFormat": "sphinx-notypes",
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.rulers": [
+						72,
+						88
+					],
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": "explicit"
+					}
+				}
+				// "isort.args": [
+				// 	"--profile",
+				// 	"black"
+				// ],
+				// "pylint.args": [
+				// 	"--load-plugins=pylint_odoo",
+				// 	"--valid-odoo-version=16.0",
+				// 	"-e odoolint"
+				// ],
+				// "black-formatter.args": [
+				// 	"--line-length=88"
+				// ]
+			},
+			"extensions": [
+				// ---------------------------- Odoo & Python
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"njpwerner.autodocstring",
+				"charliermarsh.ruff",
+				// "ms-python.pylint",
+				// "ms-python.black-formatter",
+				// "ms-python.isort",
+				"Odoo.owl-vision",
+				"jigar-patel.OdooSnippets",
+				// --------------------------- JavaScript
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				// --------------------------- XML
+				"redhat.vscode-xml",
+				"DotJoshJohnson.xml",
+				// --------------------------- CSV
+				"janisdd.vscode-edit-csv",
+				"mechatroner.rainbow-csv",
+				// --------------------------- Additional Extensions
+				"redhat.vscode-yaml",
+				"christian-kohler.path-intellisense"
+			]
+		}
+	}
+}

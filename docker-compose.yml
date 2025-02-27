@@ -1,0 +1,35 @@
+services:
+  odoo:
+    container_name: ridery_technical_test
+    command: odoo --dev=all
+    build:
+      context: odoo
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "${ODOO_EXT_PORT}:8069"
+      - "${ODOO_DEBUG_EXT_PORT}:8071"
+    volumes:
+      - odoo:/var/lib/odoo
+      - ./odoo/config:/etc/odoo
+      - ./odoo/addons:/mnt/custom-addons
+    # restart: unless-stopped
+  db:
+    container_name: ridery_technical_test_db
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    ports:
+      - "${POSTGRES_EXT_PORT}:5432"
+    volumes:
+        - db:/var/lib/postgresql/data
+    # restart: unless-stopped
+
+
+volumes:
+  odoo:
+  db:
+
