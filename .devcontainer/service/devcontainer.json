@@ -1,0 +1,47 @@
+{
+    "name": "Ridery Technical Test (Service)",
+    "dockerComposeFile": [
+        "../../docker-compose.yml"
+    ],
+	"service": "service",
+	"remoteUser": "root",
+	"workspaceFolder": "/app",
+	"shutdownAction": "none",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/bin/python3",
+				"autoDocstring.docstringFormat": "sphinx-notypes",
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.rulers": [
+						72,
+						88
+					],
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": "explicit"
+					}
+				}
+			},
+			"extensions": [
+				// ---------------------------- Python
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"njpwerner.autodocstring",
+				"charliermarsh.ruff",
+				// "ms-python.pylint",
+				// "ms-python.black-formatter",
+				// "ms-python.isort",
+				// --------------------------- XML
+				"redhat.vscode-xml",
+				"DotJoshJohnson.xml",
+				// --------------------------- CSV
+				"janisdd.vscode-edit-csv",
+				"mechatroner.rainbow-csv",
+				// --------------------------- Additional Extensions
+				"redhat.vscode-yaml",
+				"christian-kohler.path-intellisense"
+			]
+		}
+	}
+}

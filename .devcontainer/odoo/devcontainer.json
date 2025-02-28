@@ -1,7 +1,7 @@
 {
-	"name": "Ridery Technical Test",
+	"name": "Ridery Technical Test (Odoo)",
 	"dockerComposeFile": [
-		"../docker-compose.yml"
+		"../../docker-compose.yml"
 	],
 	"service": "odoo",
 	"remoteUser": "root",
