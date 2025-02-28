@@ -19,9 +19,6 @@ class EndpointLog(models.Model):
     message = fields.Text(string="Response Message")
 
     @api.model
-    def pull_log(self, status_code: int, msg: str):
-        state_vals = {"state": "success", "message": msg}
-
-        if status_code >= 400 or status_code >= 500:
-            state_vals["state"] = "error"
+    def pull_log(self, state: str, msg: str):
+        state_vals = {"state": state, "message": msg}
         self.create(state_vals)
