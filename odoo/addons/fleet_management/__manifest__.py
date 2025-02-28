@@ -5,8 +5,8 @@
     """,
     "author": "José Vizcaya",
     "category": "Contact/Fleet",
-    "version": "16.0.1.0.0",
-    "depends": ["contacts"],
+    "version": "16.0.1.1.0",
+    "depends": ["contacts", "endpoint_logs"],
     "data": [
         "security/fleet_management_security.xml",
         "security/ir.model.access.csv",

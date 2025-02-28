@@ -19,6 +19,13 @@
                 sequence="20"/>
             <menuitem id="menu_drivers_submenu" action="res_partner_driver_action" sequence="30"/>
         </menuitem>
+        <menuitem id="menu_settings_submenu" name="Settings" sequence="20">
+            <menuitem
+                id="menu_logs_submenu"
+                action="endpoint_logs.endpoint_log_action"
+                groups="fleet_management.group_vehicle_admin"
+                sequence="10"/>
+        </menuitem>
     </menuitem>
 
     <!-- groups="vehicle_management.group_mrp_quotation_order_user" -->
