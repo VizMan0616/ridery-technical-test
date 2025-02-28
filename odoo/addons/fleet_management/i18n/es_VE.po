@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20250227\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-28 04:26+0000\n"
+"PO-Revision-Date: 2025-02-28 04:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__active
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle_brand__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: fleet_management
+#: model:res.groups,name:fleet_management.group_vehicle_admin
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: fleet_management
+#: model:ir.module.category,description:fleet_management.module_vehicle_management
+msgid "Allows to manage restriction levels of the Vehicle Management module."
+msgstr "Permite gestionar los niveles de restricciones para el modulo de Gestión de Vehículos."
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_form_view
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__brand_id
+msgid "Brand"
+msgstr "Marca"
+
+#. module: fleet_management
+#: model:ir.actions.act_window,name:fleet_management.vehicle_brand_action
+#: model:ir.ui.menu,name:fleet_management.menu_vehicle_brands_submenu
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_brand_view_tree
+msgid "Brands"
+msgstr "Marcas"
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_search_view
+msgid "By Brand"
+msgstr "Por Marca"
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_search_view
+msgid "By Partner"
+msgstr "Por Conductor"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__color
+msgid "Color"
+msgstr "Color"
+
+#. module: fleet_management
+#: model:ir.model,name:fleet_management.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: fleet_management
+#: model_terms:ir.actions.act_window,help:fleet_management.vehicle_brand_action
+msgid "Create a Vehicle Brand!"
+msgstr "¡Crea una Marca de Vehículo!"
+
+#. module: fleet_management
+#: model_terms:ir.actions.act_window,help:fleet_management.res_partner_driver_action
+msgid "Create a new customer in your address book"
+msgstr "Crea un nuevo conductor en tu libreta de direcciones"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__partner_id
+#: model_terms:ir.ui.view,arch_db:fleet_management.view_res_partner_filter
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: fleet_management
+#: model:ir.actions.act_window,name:fleet_management.res_partner_driver_action
+#: model:ir.ui.menu,name:fleet_management.menu_drivers_submenu
+msgid "Drivers"
+msgstr "Conductores"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__image_1920
+msgid "Image"
+msgstr "Imagen"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__image_1024
+msgid "Image 1024"
+msgstr "Imagen 2014"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__image_128
+msgid "Image 128"
+msgstr "Imagen 128"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__image_256
+msgid "Image 256"
+msgstr "Imagen 256"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__image_512
+msgid "Image 512"
+msgstr "Imagen 512"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_res_partner__is_driver
+#: model:ir.model.fields,field_description:fleet_management.field_res_users__is_driver
+msgid "Is Driver"
+msgstr "Es un Conductor"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__name
+msgid "Model Name"
+msgstr "Nombre del Modelo"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle_brand__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: fleet_management
+#: model_terms:ir.actions.act_window,help:fleet_management.vehicle_action
+msgid "No vehicles were created yet, let's add some!"
+msgstr "No se han creado vehículos todavía. ¡Agreguemos algunos!"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__plate_code
+msgid "Plate"
+msgstr "Placa"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__release_year
+msgid "Release Year"
+msgstr "Fecha de Lanzamiento"
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.view_partner_form
+msgid "Send Vehicles"
+msgstr "Enviar Vehículos"
+
+#. module: fleet_management
+#: model:ir.model.fields,field_description:fleet_management.field_vehicle__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: fleet_management
+#: model:ir.model,name:fleet_management.model_vehicle
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: fleet_management
+#: model:ir.model,name:fleet_management.model_vehicle_brand
+msgid "Vehicle Brand"
+msgstr "Marca del Vehículo"
+
+#. module: fleet_management
+#: model:ir.module.category,name:fleet_management.module_vehicle_management
+msgid "Vehicle Management"
+msgstr "Gestión de Vehículo"
+
+#. module: fleet_management
+#: model:ir.actions.act_window,name:fleet_management.vehicle_action
+#: model:ir.model.fields,field_description:fleet_management.field_res_partner__vehicle_ids
+#: model:ir.model.fields,field_description:fleet_management.field_res_users__vehicle_ids
+#: model:ir.ui.menu,name:fleet_management.menu_vehicle_root
+#: model:ir.ui.menu,name:fleet_management.menu_vehicles_root_submenu
+#: model:ir.ui.menu,name:fleet_management.menu_vehicles_submenu
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_tree_view
+#: model_terms:ir.ui.view,arch_db:fleet_management.view_partner_form
+msgid "Vehicles"
+msgstr "Vehículos"
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_form_view
+msgid "e.g. Blue"
+msgstr "p. ej., Azul"
+
+#. module: fleet_management
+#: model_terms:ir.ui.view,arch_db:fleet_management.vehicle_form_view
+msgid "e.g. Lancer Evo"
+msgstr "p. ej., Lancer Evo"

@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ridery_fleet_ridery_fleet,ridery_fleet.ridery_fleet,model_ridery_fleet_ridery_fleet,base.group_user,1,1,1,1
+access_vehicle_admin,access.vehicle.admin,model_vehicle,fleet_management.group_vehicle_admin,1,1,1,1
+access_vehicle_user,access.vehicle.user,model_vehicle,,1,0,0,0
+access_vehicle_brand_admin,access.vehicle.brand.admin,model_vehicle_brand,fleet_management.group_vehicle_admin,1,1,1,1
+access_vehicle_brand_user,access.vehicle.brand.user,model_vehicle_brand,,1,0,0,0

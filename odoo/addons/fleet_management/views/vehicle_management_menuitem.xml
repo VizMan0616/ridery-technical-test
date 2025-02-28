@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        name="Vehicles"
+        id="menu_vehicle_root"
+        groups="fleet_management.group_vehicle_admin"
+        sequence="144">
+        <menuitem id="menu_vehicles_root_submenu" name="Vehicles" sequence="10">
+            <menuitem
+                id="menu_vehicles_submenu"
+                action="vehicle_action"
+                groups="fleet_management.group_vehicle_admin"
+                sequence="10"/>
+            <menuitem
+                id="menu_vehicle_brands_submenu"
+                action="vehicle_brand_action"
+                groups="fleet_management.group_vehicle_admin"
+                sequence="20"/>
+            <menuitem id="menu_drivers_submenu" action="res_partner_driver_action" sequence="30"/>
+        </menuitem>
+    </menuitem>
+
+    <!-- groups="vehicle_management.group_mrp_quotation_order_user" -->
+    <!-- web_icon="mrp_budgeting_construction,static/description/icon.png" -->
+</odoo>

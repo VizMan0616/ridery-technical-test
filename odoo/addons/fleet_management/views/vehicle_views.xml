@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vehicle_search_view" model="ir.ui.view">
+        <field name="name">vehicle.search.view</field>
+        <field name="model">vehicle</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name"/>
+                <field name="plate_code"/>
+                <field name="partner_id"/>
+                <field name="color"/>
+                <filter name="by_partner" string="By Partner" context="{'group_by': 'partner_id'}" />
+                <filter name="by_brand" string="By Brand" context="{'group_by': 'brand_id'}" />
+            </search>
+        </field>
+    </record>
+
+    <record id="vehicle_tree_view" model="ir.ui.view">
+        <field name="name">vehicle.tree.view</field>
+        <field name="model">vehicle</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicles">
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="partner_id" optional="show"/>
+                <field name="release_year" optional="show"/>
+                <field name="plate_code"/>
+                <field name="color" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="vehicle_form_view" model="ir.ui.view">
+        <field name="name">vehicle.form.view</field>
+        <field name="model">vehicle</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>
+
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Lancer Evo"/>
+                        </h1>
+                        <field name="sequence" readonly="True"/>
+                    </div>
+
+                    <group>
+                        <group name="group_left">
+                            <field name="active" invisible="True"/>
+                            <field name="partner_id"/>
+                            <field name="plate_code" placeholder="AB123CD"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="brand_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True, 'no_edit': True}"/>
+                            <field name="release_year" placeholder="YYYY"/>
+                            <field name="color" placeholder="e.g. Blue"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="vehicle_action" model="ir.actions.act_window">
+        <field name="name">Vehicles</field>
+        <field name="res_model">vehicle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No vehicles were created yet, let's add some!
+            </p>
+        </field>
+    </record>
+
+</odoo>

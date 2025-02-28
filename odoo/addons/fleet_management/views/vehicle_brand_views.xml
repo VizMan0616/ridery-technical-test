@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vehicle_brand_view_tree" model="ir.ui.view">
+        <field name="name">vehicle.brand.view.tree</field>
+        <field name="model">vehicle.brand</field>
+        <field name="arch" type="xml">
+            <tree string="Brands" editable="bottom">
+                <field name="name"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="vehicle_brand_action" model="ir.actions.act_window">
+        <field name="name">Brands</field>
+        <field name="res_model">vehicle.brand</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a Vehicle Brand!
+            </p>
+        </field>
+    </record>
+
+</odoo>
