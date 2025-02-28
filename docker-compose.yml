@@ -7,6 +7,8 @@ services:
       dockerfile: ./Dockerfile
     depends_on:
       - db
+    networks:
+      - apinet
     ports:
       - "${ODOO_EXT_PORT}:8069"
       - "${ODOO_DEBUG_EXT_PORT}:8071"
@@ -22,14 +24,31 @@ services:
       - POSTGRES_USER=odoo
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_DB=postgres
+    networks:
+      - apinet
     ports:
       - "${POSTGRES_EXT_PORT}:5432"
     volumes:
         - db:/var/lib/postgresql/data
     # restart: unless-stopped
 
+  service:
+    container_name: ridery_technical_test_api_service
+    build:
+      context: service
+      dockerfile: ./Dockerfile
+    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 80
+    networks:
+      - apinet
+    ports:
+      - "${API_PORT}:80"
+    volumes:
+      - ./service:/app
 
 volumes:
   odoo:
   db:
 
+networks:
+  apinet:
+    name: "service_net"
