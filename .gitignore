@@ -75,3 +75,4 @@ docs/_build/
 
 #Env files
 /*/**/.env
+.env
