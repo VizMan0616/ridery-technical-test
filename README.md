@@ -5,13 +5,14 @@ Implemetación de prueba técnica implementando una API que posteriormente es co
 # Configuración
 
 1. Tener docker y docker compose instalado.
-2. Se debe crear un archivo `.env` con los mismos argumentos que contiene el [.env.example](https://github.com/VizMan0616/ridery-technical-test/blob/main/.env.example) y de esta forma asignar los puertos para cada uno de los servicios de docker.
-3. Para poder levantar el ambiente de `odoo` junto a su base de datos y el API que registra los vehículos se debe ejecutar el siguiente comando:
+2. Para configurar la contraseña de la base de datos debemos ubicar el archivo conf que se enecuentra en la ruta de [odoo/config/odoo.conf](https://github.com/VizMan0616/ridery-technical-test/blob/main/odoo/config/odoo.conf) allí debemos ubicar el parámetro `admin_passwd` y asignamos la contraseña que queramos para crear una base de datos al momento de levantar un ambiente de odoo.
+3. Se debe crear un archivo `.env` con los mismos argumentos que contiene el [.env.example](https://github.com/VizMan0616/ridery-technical-test/blob/main/.env.example) y de esta forma asignar los puertos para cada uno de los servicios de docker.
+4. Para poder levantar el ambiente de `odoo` junto a su base de datos y el API que registra los vehículos se debe ejecutar el siguiente comando:
     ```bash
     docker compose up -d
     ```
     _Se agrega el argumento `-d` (detach) para poder correr los 3 servicios de fondo._
-4. Para poder visualizar los logs del servicio de la API y ver cómo se imprimen los vehículos cargados dentro del endpoint se debe ejecutar el siguiente comando:
+5. Para poder visualizar los logs del servicio de la API y ver cómo se imprimen los vehículos cargados dentro del endpoint se debe ejecutar el siguiente comando:
     ```bash
     docker compose logs -f --tail 10 service
     ```
